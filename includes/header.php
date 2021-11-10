@@ -16,31 +16,32 @@
     <title>Attendance - <?php echo $title;?></title>
   </head>
   <body>
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="index.php">IT Conference</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link active" href="index.php">Home</a>
-          <a class="nav-item nav-link" href="viewRecords.php">View Attendees</a>
-        </div>
-        <div class="navbar-nav ml-auto">
-          <?php 
-            if(!isset($_SESSION['userid'])){
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.php" style="margin-left: 15px">IT Conference</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div style="margin-right: 15px" class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.php">Home</a>
+            <a class="nav-item nav-link" href="viewRecords.php">View Attendees</a>
+          </div>
+          <div style="margin-left: 780px" class="navbar-nav" >
+            <?php 
+              if(!isset($_SESSION['userid'])){
 
-            
-          ?>
-          <a class="nav-item nav-link" href="login.php">Login</a>
-          <?php } else {?>
-            <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username']?>! </span></a>
-            <a class="nav-item nav-link" href="logout.php">Log Out</a>
-          <?php } ?>
+              
+            ?>
+            <a class="nav-item nav-link" href="login.php">Login</a>
+            <?php } else {?>
+              <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username']?>! </span></a>
+              <a class="nav-item nav-link" href="logout.php">Log Out</a>
+            <?php } ?>
+          </div>
         </div>
-      </div>
-    </nav>
-    <br>
+      </nav>
+  <div class="container">
+         
+      <br>
 
 

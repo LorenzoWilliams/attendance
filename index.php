@@ -38,7 +38,12 @@
             <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" name="phone">
             <div id="phoneHelp" class="form-text">We'll never share your number with anyone else.</div>
         </div>
-
+        <div class="mb-3">
+            <div class="custom-file">
+                <label for="avatar" class="form-label">Upload Image(Optional)</label>
+                <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
+            </div>
+        </div>
         <div class="d-grid gap-2">
             <button type="submit" class="btn btn-primary btn-block" name="submit">Submit</button>
         </div>
