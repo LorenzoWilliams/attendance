@@ -11,9 +11,11 @@
         //function to insert a new record into the attendee database
         public function insertAttendees($fname, $lname, $dob, $email, $phone, $specialty){
             try {
+                //define sql statement to be executed
                 $sql = "INSERT INTO attendee (firstname, lastname, dateofbirth, emailaddress,phonenumber,specialty_id) VALUES(:fname, :lname, :dob, :email, :phone, :specialty)";
+                //prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
-
+                //bind all placeholders to actual values
                 $stmt->bindparam(':fname',$fname);
                 $stmt->bindparam(':lname',$lname);
                 $stmt->bindparam(':dob',$dob);
